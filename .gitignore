@@ -1,0 +1,15 @@
+########## Global ##########
+**/node_modules/
+**/dist/
+.vscode/
+
+########## Client ##########
+udemi-client/.next/
+
+udemi-client/.env.local
+udemi-client/.env.development
+udemi-client/.env.production
+
+########## Server ##########
+udemi-server/src/.env
+udemi-server/dynamodb-local-metadata.json
