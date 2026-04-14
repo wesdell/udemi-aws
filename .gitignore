@@ -11,5 +11,5 @@ udemi-client/.env.development
 udemi-client/.env.production
 
 ########## Server ##########
-udemi-server/src/.env
+udemi-server/.env
 udemi-server/dynamodb-local-metadata.json
