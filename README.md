@@ -1,6 +1,6 @@
 # Udemi App
 
-This is a learning management application developed using NextJS, Clerk, Stripe, TypeScript, and some AWS services like **S3**, **DynamoDB**, **IAM**, **Budgets**, **ECR**, **Lambda**, **API Gateway**, and **CloudFront**.
+This is a learning management application developed using NextJS, Clerk, Stripe, TypeScript, and some AWS services like **S3**, **DynamoDB**, **IAM**, **Billing and Cost Management**, **ECR**, **Lambda**, **API Gateway**, and **CloudFront**.
 
 ## How to run this project
 
@@ -51,3 +51,17 @@ After that, navigate to **Configure** -> **Sessions** -> **Claims** and paste th
 ```
 
 ## Set up AWS
+
+Once you create your AWS account _(Root Account)_, you first must setup a Budget in order to not be charged for the services you are going to use and an IAM user to configure those services (is not recommended to use the root account to create resources).
+
+### Billing and Cost Management
+
+Create a zero spend budget:
+
+![Budget configuration](/assets/Budget.png)
+
+### Identity and Access Management (IAM)
+
+Create an IAM user:
+
+![IAM configuration](/assets/IAM.png)
