@@ -71,7 +71,7 @@ if (!isProduction) {
 const serverlessApp = serverless(app);
 export const handler = async (event: any, context: any) => {
   if (event.action === "seed") {
-    await (seed);
+    await seed();
     return {
       statusCode: 200,
       body: JSON.stringify({ message: "Data seeded successfully" })
