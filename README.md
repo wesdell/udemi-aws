@@ -2,6 +2,15 @@
 
 This is a learning management application developed using NextJS, Clerk, Stripe, TypeScript, and some AWS services like **S3**, **DynamoDB**, **IAM**, **Billing and Cost Management**, **ECR**, **Lambda**, **API Gateway**, and **CloudFront**.
 
+## Documentation
+
+- [How to run this project](#how-to-run-this-project)
+  - [Clerk configuration](#clerk-configuration)
+- [Set up AWS](#set-up-aws)
+  - [Billing and Cost Management](#billing-and-cost-management)
+  - [Identity and Access Management (IAM)](#identity-and-access-management-iam)
+  - [Access AWS via Command Line Interface (CLI)](#access-aws-via-command-line-interface-cli)
+
 ## How to run this project
 
 Install DynamoDB locally [DynamoDD documentation](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html).
@@ -73,3 +82,16 @@ Lambda role:
 
 API Gateway role:
 ![IAM role for API Gateway](/assets/iam-role-apigateway.png)
+
+Finally we create access keys to have access to AWS via CLI:
+![IAM user access keys](/assets/iam-access-keys.png)
+
+### Access AWS via Command Line Interface (CLI)
+
+Open a terminal and run:
+
+```
+aws configure
+```
+
+Enter your credentials generated one step before.
