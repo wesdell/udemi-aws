@@ -161,7 +161,7 @@ export const updateCourse = async (req: Request, res: Response): Promise<void> =
         sectionId: section.sectionId || crypto.randomUUID(),
         chapters: section.chapters.map((chapter: any) => ({
           ...chapter,
-          chapter: chapter.chapterId || crypto.randomUUID()
+          chapterId: chapter.chapterId || crypto.randomUUID()
         }))
       }));
     }
