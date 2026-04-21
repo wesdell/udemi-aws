@@ -10,6 +10,7 @@ This is a learning management application developed using NextJS, Clerk, Stripe,
   - [Billing and Cost Management](#billing-and-cost-management)
   - [Identity and Access Management (IAM)](#identity-and-access-management-iam)
   - [Access AWS via Command Line Interface (CLI)](#access-aws-via-command-line-interface-cli)
+  - [Elastic Container Registry (ECR)](#elastic-container-registry-ecr)
 
 ## How to run this project
 
@@ -95,3 +96,13 @@ aws configure
 ```
 
 Enter your credentials generated one step before.
+
+### Elastic Container Registry (ECR)
+
+Create a repository:
+![ECR repository configuration](/assets/ecr-repository.png)
+
+Navigate to the _udemi-client_ folder and run all push commands on the console:
+![ECR push commands](/assets/ecr-push-commands.png)
+
+Check if the image was upload successfully on your repo.
