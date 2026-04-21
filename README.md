@@ -64,4 +64,12 @@ Create a zero spend budget:
 
 Create an IAM user:
 
-![IAM configuration](/assets/IAM.png)
+![IAM configuration](/assets/iam-user.png)
+
+Create IAM Roles for Lambda and API Gateway:
+
+Lambda role:
+![IAM role for Lambda](/assets/iam-role-lambda.png)
+
+API Gateway role:
+![IAM role for API Gateway](/assets/iam-role-apigateway.png)
