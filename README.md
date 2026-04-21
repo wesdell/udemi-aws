@@ -11,6 +11,8 @@ This is a learning management application developed using NextJS, Clerk, Stripe,
   - [Identity and Access Management (IAM)](#identity-and-access-management-iam)
   - [Access AWS via Command Line Interface (CLI)](#access-aws-via-command-line-interface-cli)
   - [Elastic Container Registry (ECR)](#elastic-container-registry-ecr)
+  - [Lambda](#lambda)
+  - [DynamoDB](#dynamodb)
 
 ## How to run this project
 
@@ -106,3 +108,26 @@ Navigate to the _udemi-client_ folder and run all push commands on the console:
 ![ECR push commands](/assets/ecr-push-commands.png)
 
 Check if the image was upload successfully on your repo.
+
+### Lambda
+
+Create the lambda function:
+![Lambda function](/assets/lambda-function.png)
+
+Test lambda function with this configuration and check if you get a successful message from it:
+![Lambda test event](/assets/lambda-event-1.png)
+
+Change lambda timeout by setting it up to 5 minutes:
+![Lambda configuration](/assets/lambda-config.png)
+
+Add environment variables:
+![Lambda configuration](/assets/lambda-env-1.png)
+
+### DynamoDB
+
+Run another event but this time to seed mock data to Dynamo DB:
+
+![Lambda seed event](/assets/lambda-event-2.png)
+
+Check out on DynamoDB the tables and its items:
+![DynamoDB tables](/assets/dynamodb-tables.png)
