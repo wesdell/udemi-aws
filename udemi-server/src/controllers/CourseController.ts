@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { v4 as uuidv4 } from "uuid";
 import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { getAuth } from "@clerk/express";
@@ -80,7 +79,7 @@ export const createCourse = async (req: Request, res: Response): Promise<void> =
 
   try {
     const newCourse = new Course({
-      courseId: uuidv4(),
+      courseId: crypto.randomUUID(),
       teacherId,
       teacherName,
       title: "Untitled course",
@@ -159,10 +158,10 @@ export const updateCourse = async (req: Request, res: Response): Promise<void> =
 
       updatedCourse.sections = sections.map((section: any) => ({
         ...section,
-        sectionId: section.sectionId || uuidv4(),
+        sectionId: section.sectionId || crypto.randomUUID(),
         chapters: section.chapters.map((chapter: any) => ({
           ...chapter,
-          chapter: chapter.chapterId || uuidv4()
+          chapter: chapter.chapterId || crypto.randomUUID()
         }))
       }));
     }
@@ -251,7 +250,7 @@ export const getUploadVideoUrl = async (
   }
 
   try {
-    const uniqueId = uuidv4();
+    const uniqueId = crypto.randomUUID();
     const s3Key = `videos/${uniqueId}/${fileName}`;
 
     const command = new PutObjectCommand({
