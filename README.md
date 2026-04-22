@@ -13,6 +13,7 @@ This is a learning management application developed using NextJS, Clerk, Stripe,
   - [Elastic Container Registry (ECR)](#elastic-container-registry-ecr)
   - [Lambda](#lambda)
   - [DynamoDB](#dynamodb)
+  - [API Gateway](#api-gateway)
 
 ## How to run this project
 
@@ -131,3 +132,18 @@ Run another event but this time to seed mock data to Dynamo DB:
 
 Check out on DynamoDB the tables and its items:
 ![DynamoDB tables](/assets/dynamodb-tables.png)
+
+### API Gateway
+
+First navigate to the API Gateway service and create a REST API with this configuration:
+![API Gateway REST API](/assets/api-gateway.png)
+
+Then create a resource:
+![API Gateway Resource](/assets/api-gateway-resource.png)
+
+The select _ANY_ and click edit integration:
+![API Gateway Resource](/assets/api-gateway-integration-1.png)
+![API Gateway Resource](/assets/api-gateway-integration-2.png)
+
+Finally, click on Deploy API:
+![API Gateway Resource](/assets/api-gateway-deploy.png)
