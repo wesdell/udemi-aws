@@ -56,7 +56,7 @@ const CheckoutDetailsPage = () => {
             <Form {...methods}>
               <form
                 onSubmit={methods.handleSubmit((data) => {
-                  console.log(data);
+                  console.log("Data");
                 })}
                 className="checkout-details__form"
               >
