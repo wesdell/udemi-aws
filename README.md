@@ -16,6 +16,8 @@ This is a learning management application developed using NextJS, Clerk, Stripe,
   - [API Gateway](#api-gateway)
     - [Frontend Deployment](#frontend-deployment)
   - [S3](#s3)
+  - [CloudFront](#cloudfront)
+    - [Lambda ENV](#edit-lambda-environment-variables)
 
 ## How to run this project
 
@@ -176,3 +178,21 @@ Setup an S3 bucket by just defining its name.
 
 Then edit S3 bucket CORS with this:
 ![S3 Bucket CORS](/assets/s3-cors.png)
+
+### CloudFront
+
+Create a distribution on CloudFront with this configuration:
+![CloudFront distribution part 1](/assets/cloudfront-1.png)
+![CloudFront distribution part 2](/assets/cloudfront-2.png)
+![CloudFront distribution part 3](/assets/cloudfront-3.png)
+
+### Edit Lambda environment variables
+
+Go to your Lambda function again an add two more env variables:
+![Edit Lambda environemnt variables](/assets/lambda-env-2.png)
+
+Remember to set up your CLOUDFRONT_DOMAIN with this format:
+
+```
+https://{your-cloudfront-domain-name}
+```
