@@ -14,6 +14,7 @@ This is a learning management application developed using NextJS, Clerk, Stripe,
   - [Lambda](#lambda)
   - [DynamoDB](#dynamodb)
   - [API Gateway](#api-gateway)
+    - [Frontend Deployment](#frontend-deployment)
 
 ## How to run this project
 
@@ -147,3 +148,22 @@ The select _ANY_ and click edit integration:
 
 Finally, click on Deploy API:
 ![API Gateway Resource](/assets/api-gateway-deploy.png)
+
+### Frontend Deployment
+
+Go to Vercel and add a new project on this way:
+![Frontend deploy part 1](/assets/vercel-1.png)
+![Frontend deploy part 1](/assets/vercel-2.png)
+![Frontend deploy part 1](/assets/vercel-3.png)
+
+Remember to set up your NEXT_PUBLIC_API_BASE_URL with this format:
+
+```
+https://{your-api-gateway-invoke-url}
+```
+
+Remember to set up your NEXT_PUBLIC_LOCAL_URL with this format:
+
+```
+https://{your-vercel-app-url}
+```
