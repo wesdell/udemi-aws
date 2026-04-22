@@ -66,8 +66,8 @@ const CourseEditor = () => {
 
   const onSubmit = async (data: CourseFormData) => {
     try {
-      const updatedSections = uploadAllVideos(sections, id, getUploadVideoUrl);
-      const formData = createCourseFormData(data, sections);
+      const updatedSections = await uploadAllVideos(sections, id, getUploadVideoUrl);
+      const formData = createCourseFormData(data, updatedSections);
 
       await updateCourse({
         courseId: id,
