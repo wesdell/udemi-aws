@@ -15,6 +15,7 @@ This is a learning management application developed using NextJS, Clerk, Stripe,
   - [DynamoDB](#dynamodb)
   - [API Gateway](#api-gateway)
     - [Frontend Deployment](#frontend-deployment)
+  - [S3](#s3)
 
 ## How to run this project
 
@@ -167,3 +168,11 @@ Remember to set up your NEXT_PUBLIC_LOCAL_URL with this format:
 ```
 https://{your-vercel-app-url}
 ```
+
+### S3
+
+Setup an S3 bucket by just defining its name.
+![S3 Bucket configuration](/assets/s3-bucket.png)
+
+Then edit S3 bucket CORS with this:
+![S3 Bucket CORS](/assets/s3-cors.png)
